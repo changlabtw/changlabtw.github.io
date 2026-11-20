@@ -1,0 +1,14 @@
+# changlabtw — Bioinformatic Data Science Lab, NCCU
+
+> GitHub Pages namespace of the Bioinformatic Data Science Lab at National Chengchi University (NCCU), Taipei, Taiwan, led by Jia-Ming Chang (張家銘), ORCID 0000-0002-6711-1739. The lab website lives at /lab/; other paths under this domain are documentation sites for individual software tools.
+
+## Lab website
+
+- [Lab website](https://changlabtw.github.io/lab/): research, publications, team, software
+- [llms.txt](https://changlabtw.github.io/lab/llms.txt): concise description of the lab and its principal investigator, with verified profiles
+- [llms-full.txt](https://changlabtw.github.io/lab/llms-full.txt): full text of the lab website
+
+## Elsewhere
+
+- [GitHub organization](https://github.com/changlabtw): source code of the lab's tools
+- [ORCID](https://orcid.org/0000-0002-6711-1739): authoritative identifier for Jia-Ming Chang

@@ -1,0 +1,57 @@
+# 爬蟲只讀網域根目錄的 robots.txt,所以真正生效的是這一份。
+# 規則內容與 changlab-research-os 的 domains/site/robots.txt 相同(該份會被複製到 /lab/,
+# 但放在子路徑對爬蟲無效)。改其中一份時,兩份一起改。
+#
+# robots.txt 是「請求」不是「強制」。守規矩的爬蟲會遵守,不守的不會。
+
+Sitemap: https://changlabtw.github.io/lab/sitemap.xml
+# ─────────────────────────────────────────────── OpenAI
+# GPTBot —— 抓取內容用於訓練 OpenAI 的模型
+User-agent: GPTBot
+Allow: /
+
+# OAI-SearchBot —— 為 ChatGPT 的搜尋功能建立索引(不是訓練)
+User-agent: OAI-SearchBot
+Allow: /
+
+# ChatGPT-User —— 使用者在對話中要求瀏覽某個網址時的即時抓取
+User-agent: ChatGPT-User
+Allow: /
+
+# ─────────────────────────────────────────────── Anthropic
+# ClaudeBot —— 抓取內容用於訓練
+User-agent: ClaudeBot
+Allow: /
+
+# Claude-User —— 使用者要求 Claude 讀某個網址時的即時抓取
+User-agent: Claude-User
+Allow: /
+
+# Claude-SearchBot —— 為 Claude 的搜尋功能建立索引
+User-agent: Claude-SearchBot
+Allow: /
+
+# ─────────────────────────────────────────────── Google
+# Google-Extended —— **不是爬蟲**,是一個開關。它控制 Googlebot 已抓取的內容
+# 能否用於 Gemini 與 Vertex AI。設 Disallow 不會影響一般搜尋排名。
+User-agent: Google-Extended
+Allow: /
+
+# ─────────────────────────────────────────────── 其他
+# PerplexityBot —— 為 Perplexity 的問答建立索引
+User-agent: PerplexityBot
+Allow: /
+
+# Applebot-Extended —— 同 Google-Extended,是開關不是爬蟲。控制 Applebot
+# 已抓取的內容能否用於 Apple Intelligence 的訓練。
+User-agent: Applebot-Extended
+Allow: /
+
+# CCBot —— Common Crawl。它的語料是多數開源與商業模型訓練資料的上游,
+# **長期槓桿最大的一項**:進了 Common Crawl 的內容會被反覆使用多年。
+User-agent: CCBot
+Allow: /
+
+# ─────────────────────────────────────────────── 其餘一律允許
+User-agent: *
+Allow: /
